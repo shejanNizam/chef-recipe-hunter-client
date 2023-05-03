@@ -29,8 +29,7 @@ const ChefCard = ({ singleChef }) => {
           <h6>Experience: {years_of_experience}+ Years </h6>
           <h6>Number of Recipes: {numbers_of_recipes}+ Items </h6>
           <h6>Likes: {likes} </h6>
-          {/* to={`/details/${course.id}`} */}
-          <Link>
+          <Link to={`/chef_data/${_id}`}>
             <Button variant="outline-secondary">View Recipes</Button>
           </Link>
         </Card.Body>
