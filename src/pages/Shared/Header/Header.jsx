@@ -1,10 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
@@ -25,10 +35,17 @@ const Header = () => {
             </Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+            {user && <FaUserAlt style={{ fontSize: "2rem" }} />}
+
+            {user ? (
+              <Button onClick={handleLogOut} variant="secondary">
+                Logout
+              </Button>
+            ) : (
+              <Link to="/login">
+                <Button variant="secondary">Login</Button>
+              </Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
