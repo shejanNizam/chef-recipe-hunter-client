@@ -14,11 +14,10 @@ const ChefCard = ({ singleChef }) => {
     years_of_experience,
     numbers_of_recipes,
     likes,
-    short_bio,
   } = singleChef;
   return (
     <div>
-      <Card style={{ width: "20rem" }}>
+      <Card border="info" style={{ width: "20rem" }}>
         <Card.Img
           style={{ height: "20rem" }}
           variant="top"
