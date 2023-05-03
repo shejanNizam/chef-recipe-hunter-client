@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ChefCard = ({ singleChef }) => {
   //   console.log(singleChef);
@@ -28,7 +29,10 @@ const ChefCard = ({ singleChef }) => {
           <h6>Experience: {years_of_experience}+ Years </h6>
           <h6>Number of Recipes: {numbers_of_recipes}+ Items </h6>
           <h6>Likes: {likes} </h6>
-          <Button variant="outline-secondary">View Recipes</Button>
+          {/* to={`/details/${course.id}`} */}
+          <Link>
+            <Button variant="outline-secondary">View Recipes</Button>
+          </Link>
         </Card.Body>
       </Card>
     </div>
