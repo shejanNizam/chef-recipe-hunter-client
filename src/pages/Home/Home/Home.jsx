@@ -9,7 +9,6 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ChefCard from "./ChefCard/ChefCard";
 import "./Home.css";
-import MidBanner from "./MidBanner/MidBanner";
 
 const Home = () => {
   const chefData = useLoaderData();
@@ -32,7 +31,6 @@ const Home = () => {
           <ChefCard key={singleChef._id} singleChef={singleChef}></ChefCard>
         ))}
       </div>
-      <MidBanner />
       <div className="mt-5 bg-image bg-parallax overlay">
         <div className="container">
           <div className="row">
