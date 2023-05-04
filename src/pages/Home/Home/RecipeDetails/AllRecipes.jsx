@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, Image } from "react-bootstrap";
 import { toast } from "react-hot-toast";
+import LazyLoad from "react-lazy-load";
 
 const AllRecipes = ({ recipe }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -24,10 +25,13 @@ const AllRecipes = ({ recipe }) => {
       <Card border="info" className="text-center w-75 mx-auto m-4">
         <Card.Header>Featured</Card.Header>
         <Card.Body>
-          <Image
-            style={{ width: "30rem", height: "16rem" }}
-            src={recipe_picture}
-          ></Image>
+          <LazyLoad height={200} once>
+            <Image
+              style={{ width: "30rem", height: "16rem" }}
+              src={recipe_picture}
+            ></Image>
+          </LazyLoad>
+
           <Card.Title>Recipe: {recipe_name} </Card.Title>
           <Card.Text>
             <h6>Ingredients:</h6> {ingredients}

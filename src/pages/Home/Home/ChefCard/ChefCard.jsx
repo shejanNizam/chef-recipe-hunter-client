@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const ChefCard = ({ singleChef }) => {
@@ -18,11 +19,14 @@ const ChefCard = ({ singleChef }) => {
   return (
     <div>
       <Card border="info" style={{ width: "20rem" }}>
-        <Card.Img
-          style={{ height: "20rem" }}
-          variant="top"
-          src={chef_picture}
-        />
+        <LazyLoad height={200} once>
+          <Card.Img
+            style={{ height: "20rem" }}
+            variant="top"
+            src={chef_picture}
+          />
+        </LazyLoad>
+
         <Card.Body>
           <h3> {chef_name} </h3>
           <h6>Experience: {years_of_experience}+ Years </h6>
