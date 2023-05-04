@@ -99,10 +99,6 @@ const Login = () => {
         <Form.Text>
           Don't have an account? <Link to="/register"> Register </Link>
         </Form.Text>
-        <br />
-        <Form.Text className="text-success">success</Form.Text>
-        <br />
-        <Form.Text className="text-danger">error</Form.Text>
       </Form>
     </Container>
   );

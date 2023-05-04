@@ -42,8 +42,8 @@ const Home = () => {
             <div className="p-5 col-md-6 text-start text-white">
               <h2>Grab a 50% offer</h2>
               <p className="lead fs-5">
-                get our deal and have a chance to study for your desired subject
-                abroad and get your dream job
+                get our deal and have a chance to all food for your desired dish
+                abroad and get your favourite food
               </p>
             </div>
           </div>
@@ -56,15 +56,15 @@ const Home = () => {
             Why Chef<span style={{ color: "#374050" }}>Savvy ?</span>
           </h1>
           <p className="lead fs-5">
-            because we have the best resources avaiable, not just to study but
-            to have a mind refreshment
+            because we have the best chef avaiable, not just to cook but to have
+            a special serve..
           </p>
         </div>
         <div className="col-md-4">
           <div className="feature d-flex justify-content-start">
             <FontAwesomeIcon className="feature-icon" icon={faCloud} />
             <div className="feature-content text-start">
-              <h4>Online Courses</h4>
+              <h4>Online Orders</h4>
               <p className="lead fs-5">
                 Containing all the suggestions on books, videos, walkthroughs,
                 animations, diagrams, podcasts, tips, tactics and extra
@@ -78,7 +78,7 @@ const Home = () => {
           <div className="feature d-flex justify-content-start">
             <FontAwesomeIcon className="feature-icon" icon={faBullseye} />
             <div className="feature-content text-start">
-              <h4>Live Sessions</h4>
+              <h4>Cash on Delevary</h4>
               <p className="lead fs-5">
                 live walkthrough of official practice tests on both English and
                 Math section and answer submission by a JavaScript poll + zoom
@@ -91,7 +91,7 @@ const Home = () => {
           <div className="feature d-flex justify-content-start">
             <FontAwesomeIcon className="feature-icon" icon={faGamepad} />
             <div className="feature-content text-start">
-              <h4>Interactive Games</h4>
+              <h4>Interactive Dishes</h4>
               <p className="lead fs-5">
                 cognitive skills through exercises and games like "The Math
                 Game", "The Dice", "The Simon Game", "Fruit Slice Game" as an

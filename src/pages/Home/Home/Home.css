@@ -52,3 +52,12 @@
 .bg-image.bg-parallax {
   background-attachment: fixed;
 }
+
+@media only screen and (max-width: 767px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin: 2rem 3rem;
+  }
+}

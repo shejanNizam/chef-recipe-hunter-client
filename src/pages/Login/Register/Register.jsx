@@ -115,10 +115,6 @@ const Register = () => {
         <Form.Text>
           Already have an account? <Link to="/login"> Login </Link>
         </Form.Text>
-        <br />
-        <Form.Text className="text-success">success</Form.Text>
-        <br />
-        <Form.Text className="text-danger">error</Form.Text>
       </Form>
     </Container>
   );

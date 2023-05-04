@@ -11,3 +11,6 @@
 .items:hover {
   color: rgb(9, 179, 235);
 }
+.active {
+  color: rgb(9, 179, 235);
+}
