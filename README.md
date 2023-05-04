@@ -4,7 +4,7 @@ Best cooking for all people to get a pure taste of all kinds of Food.
 
 ## Live Link
 
-Hosted in Netlify -> [ChefSavvy](https://job-hunter11.netlify.app/)
+Hosted in Firebase -> [ChefSavvy](https://chef-recipe-hunter-c46b2.web.app/)
 
 ## React Router Dom v6.4
 
