@@ -1,12 +1,13 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -22,6 +23,29 @@ const Register = () => {
         const createdUser = result.user;
         console.log(createdUser);
         form.reset();
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate("/");
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -29,8 +53,8 @@ const Register = () => {
   };
 
   return (
-    <Container className="mx-auto w-25">
-      <h3> Please Register </h3>
+    <Container className="mx-auto my-5 p-5 w-25  square bg-light rounded">
+      <h3 className="text-success"> Please Register </h3>
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
@@ -68,15 +92,24 @@ const Register = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check
-            type="checkbox"
-            name="accept"
-            label="Accept Terms and conditions"
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="success " type="submit">
           Register
+        </Button>
+        <Button
+          onClick={handleGoogleSignIn}
+          className="ms-4"
+          variant="outline-success"
+          type="submit"
+        >
+          <FaGoogle />
+        </Button>
+        <Button
+          onClick={handleGithubSignIn}
+          className="ms-4"
+          variant="outline-success"
+          type="submit"
+        >
+          <FaGithub />
         </Button>
         <br />
         <Form.Text>

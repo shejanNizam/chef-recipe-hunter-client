@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -10,9 +10,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
-    logOut()
-      .then()
-      .catch((error) => console.log(error));
+    logOut();
   };
 
   return (
@@ -33,18 +31,28 @@ const Header = () => {
             <Link to="/about" className="items">
               <li>About</li>
             </Link>
+            <Link className="items">
+              <>
+                {user ? (
+                  <Link onClick={handleLogOut}>Logout</Link>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
+              </>
+            </Link>
           </Nav>
           <Nav>
-            {user && <FaUserAlt style={{ fontSize: "2rem" }} />}
-
-            {user ? (
-              <Button onClick={handleLogOut} variant="secondary">
-                Logout
-              </Button>
+            {user?.photoURL ? (
+              <div className="d-flex">
+                <h3 style={{ color: "orange" }}>{user?.displayName}</h3>
+                <Image
+                  style={{ height: "40px" }}
+                  roundedCircle
+                  src={user?.photoURL}
+                ></Image>
+              </div>
             ) : (
-              <Link to="/login">
-                <Button variant="secondary">Login</Button>
-              </Link>
+              <FaUserAlt style={{ fontSize: "2rem" }} />
             )}
           </Nav>
         </Navbar.Collapse>

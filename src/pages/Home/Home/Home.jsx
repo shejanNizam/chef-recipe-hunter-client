@@ -53,7 +53,7 @@ const Home = () => {
       <div className="row mb-5">
         <div className="section-header text-center">
           <h1>
-            Why Learn<span style={{ color: "#374050" }}>JAVASCRIPT ?</span>
+            Why Chef<span style={{ color: "#374050" }}>Savvy ?</span>
           </h1>
           <p className="lead fs-5">
             because we have the best resources avaiable, not just to study but
