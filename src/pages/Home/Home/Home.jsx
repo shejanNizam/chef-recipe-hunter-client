@@ -17,21 +17,26 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <div className="my-4 text-center">
+      <div className="my-5 text-center">
         <h2>Here our all Kitchen Heros</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-          asperiores, assumenda numquam ducimus quam obcaecati et quod facilis
-          deserunt sit.
+          A chef is a highly trained and skilled professional cook who is
+          proficient in all aspects of food preparation of a particular cuisine.
+          <br />
+          The word "chef" is derived (from shortened) from the term chef de
+          cuisine (French pronunciation: [ʃɛf.də .kɥi.zin]), the director or
+          head of a kitchen. <br /> Chefs can receive both formal training from
+          an institution, as well as through apprenticeship with an experienced
+          chef.
         </p>
       </div>
-
       <div className="cards">
         {chefData.map((singleChef) => (
           <ChefCard key={singleChef._id} singleChef={singleChef}></ChefCard>
         ))}
       </div>
-      <div className="mt-5 bg-image bg-parallax overlay">
+
+      <div className="my-5 bg-image bg-parallax overlay">
         <div className="container">
           <div className="row">
             <div className="p-5 col-md-6 text-start text-white">
@@ -45,9 +50,9 @@ const Home = () => {
         </div>
       </div>
       <hr class="section-hr" />
-      <div className="row">
+      <div className="row mb-5">
         <div className="section-header text-center">
-          <h1 className="mt-5">
+          <h1>
             Why Learn<span style={{ color: "#374050" }}>JAVASCRIPT ?</span>
           </h1>
           <p className="lead fs-5">
