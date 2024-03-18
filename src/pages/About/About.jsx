@@ -10,7 +10,7 @@ const About = () => {
               <img src="" alt="" className="w-75 img-thumbnail m-2" />
             </div>
             <div className="col-md-6 text-start">
-              <h2 className="">NIZAM UDDIN SHEJAN</h2>
+              <h3 className="">NIZAM UDDIN SHEJAN</h3>
               <p className="lead">
                 Student | Programmer | Writer | Content Creator
               </p>
