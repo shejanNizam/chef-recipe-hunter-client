@@ -12,7 +12,6 @@ import "./Home.css";
 
 const Home = () => {
   const chefData = useLoaderData();
-  // console.log(chefData);
 
   return (
     <>
