@@ -46,7 +46,7 @@ const Footer = () => {
                 <p className="mt-5">
                   <small>
                     <FontAwesomeIcon icon={faCopyright} /> Nizam Uddin Shejan
-                    2023 || Programming Hero Assignment 10
+                    2023 || Copyright © All rights reserved.
                   </small>
                 </p>
               </div>
